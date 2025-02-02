@@ -91,7 +91,7 @@ const images = [
   function onImageClick(event) {
     event.preventDefault();
     const targetEl = event.target;
-    if (targetEl.nodeName === 'UL') {
+    if (targetEl.nodeName !== 'IMG') {
       return;
     }
     const originalImageURL = targetEl.dataset.source;
